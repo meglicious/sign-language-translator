@@ -1,5 +1,5 @@
-import './Startup.css';
-import 'animate.css';
+
+import withAuth from '../hoc/withAuth';
 import './Username'
 import Username from './Username';
 
@@ -10,4 +10,4 @@ const Translation = () => {
     )
 }
 
-export default Translation
+export default withAuth(Translation)

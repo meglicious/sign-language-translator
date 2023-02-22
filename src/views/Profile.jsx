@@ -1,13 +1,23 @@
-import './Startup.css';
-import 'animate.css';
-import './Username'
-import Username from './Username';
+
+import ProfileActions from '../components/Profile/ProfileActions';
+import ProfileHeader from '../components/Profile/ProfileHeader';
+import ProfileTranlationHistory from '../components/Profile/ProfileTranslationHistory';
+import withAuth from '../hoc/withAuth';
+import { useUser } from '../context/UserContext';
+
+
 
 const Profile = () => {
-    return (
-       <h2>Profile</h2>
+    const { user } = useUser()
     
+    return (
+        <>
+            <h2>Profile</h2>
+            <ProfileHeader username={ user.username}/>
+            <ProfileActions />
+            <ProfileTranlationHistory translations={ user.translations}/>
+        </>
     )
 }
 
-export default Profile
+export default withAuth(Profile) 

@@ -26,7 +26,7 @@ export const addTranslation = async (user, translation) => {
 export const translationClearHistory = async (userId) => {
   try {
     const response = await fetch(`${apiUrl}/${userId}`, {
-      method: "PATCH",
+      method: "PATCH", //update parts of the record
       headers: createHeaders(),
       body: JSON.stringify({
         translations: [],

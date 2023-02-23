@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Login from "./views/Startup";
+import Startup from "./views/Startup";
 import Profile from "./views/Profile";
 import Translation from "./views/Translation";
 

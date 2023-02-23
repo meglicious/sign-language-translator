@@ -8,7 +8,7 @@ export const storageSave = (key, value) => {
   validateKey(key);
 
   if (!value) {
-    throw new Error("storageSave: No value provided for " + key);
+    throw new Error("No value provided for " + key);
   }
   sessionStorage.setItem(key, JSON.stringify(value));
 };

@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { addTranslation } from "../api/translation"
 import TranslationForm from "../components/Translations/TranslationForm"
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 import withAuth from '../hoc/withAuth';
 import './Username'
-import Username from './Username';
+import { RiTranslate } from "react-icons/ri";
+import { useUser } from "../context/UserContext";
+import { storageSave } from "../utils/storage";
 
 const { user, setUser } = useUser()
 

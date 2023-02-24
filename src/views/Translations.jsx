@@ -8,6 +8,7 @@ import { RiTranslate } from "react-icons/ri";
 import { useUser } from "../context/UserContext";
 import { storageSave } from "../utils/storage";
 
+
 const { user, setUser } = useUser()
 
 const handleTranslateClicked = async textToTranslate =>{
